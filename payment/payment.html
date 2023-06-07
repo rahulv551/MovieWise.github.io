@@ -12,14 +12,14 @@
       <form>
         <input type="email" id="email" name="email" placeholder="Email" required autocomplete="off">
         <input type="tel" id="mobile" name="mobile" placeholder="+91 Mobile Number" required autocomplete="off">
-         <button onclick="continuePayment(event)">Continue</button>
+         <button id="continue" onclick="continuePayment(event)">Continue</button>
       </form>
     </div>
 
     <div class="container">
       <h2>Unlock Offers or Apply Promo Codes</h2>
       <input type="text" id="promoCode" placeholder="Enter promo code">
-      <button onclick="applyPromoCode()">Apply</button>
+      <button id="apply" onclick="applyPromoCode()">Apply</button>
     </div>
 
     <div class="container">
@@ -46,7 +46,7 @@
       <div class="payment-details" id="cardPayment">
         <div class="payment-option-details">
           <label for="cardNumber">Card Number:</label>
-          <input type="text" id="cardNumber" name="cardNumber" required>
+          <input type="number" id="cardNumber" name="cardNumber" required>
         </div>
         <div class="payment-option-details">
           <label for="cardName">Name on Card:</label>
