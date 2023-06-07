@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #F5F5F5;
+}
+
+.main-container {
+  text-align: center;
+  height: 100vh;
+  background-color: #232222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #FFF;
+}
+
+.container {
+  background-color: #FFF;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  max-width: 600px;
+  width: 80%;
+}
+
+.container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+}
+
+.container form {
+  text-align: center;
+}
+
+.container input,
+.container select {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #CCC;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#expiryMonth,
+#expiryYear,
+#cvv
+{
+  width: 20%;
+}
+
+#promoCode{
+  width: 40%;
+}
+
+#email, #mobile
+{
+  width: 60%;
+}
+
+.container input.card-number,
+.container input.card-name {
+  width: 100%;
+}
+
+.container input.expiry,
+.container input.cvv {
+  width: 30%;
+}
+#upiId{
+  width: 25%;
+}
+
+.container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e93959;
+  color: #FFF;
+  cursor: pointer;
+  width: 40%;
+}
+
+.payment-options {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.payment-option {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.payment-option label {
+  margin-left: 5px;
+}
+
+.payment-details {
+  display: none;
+}
+
+.expiry-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3px;
+  margin-top: 5px;
+  
+}
+
+.expiry-container span {
+  margin: 0 7px;
+}
+.expiry-container label {
+  margin-right: 5px;
+}
+
+.cvv-container {
+  margin-top: 5px;
+}
+
+.show {
+  display: block;
+}
+.cvv-container{
+  margin-right: 40px;
+}

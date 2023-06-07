@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MovieWise</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    /* Added CSS for highlighting and blurring */
+    .highlighted {
+      border: 2px solid yellow;
+      filter: blur(0);
+    }
+
+    .blurred {
+      filter: blur(4px);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MovieWise</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">Theaters</a></li>
+        <li><a href="#">My Bookings</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="languages">
+    <h2>Select Language:</h2>
+    <div class="language-buttons">
+      <div class="language-button">
+        <button class="lang-btn" data-language="all">All</button>
+      </div>
+      <div class="language-button">
+        <button class="lang-btn" data-language="english">English</button>
+      </div>
+      <div class="language-button">
+        <button class="lang-btn" data-language="hindi">Hindi</button>
+      </div>
+      <div class="language-button">
+        <button class="lang-btn" data-language="kanada">Kanada</button>
+      </div>
+      <div class="language-button">
+        <button class="lang-btn" data-language="chinese">Chinese</button>
+      </div>
+      <div class="language-button">
+        <button class="lang-btn" data-language="japanese">Japanese</button>
+      </div>
+      <div class="language-button">
+        <button class="lang-btn" data-language="korean">Korean</button>
+      </div>
+      <div class="language-button">
+        <button class="lang-btn" data-language="bengali">Bengali</button>
+      </div>
+      <div class="language-button">
+        <button class="lang-btn" data-language="gujrati">Gujrati</button>
+      </div>
+      <div class="language-button">
+        <button class="lang-btn" data-language="telugu">Telugu</button>
+      </div>
+    </div>
+  </div>
+  
+  <main>
+    <h2 class="now-showing">Now Showing</h2>
+    <section id="movies">
+      
+      <div class="movie-card" data-language="english" onclick="window.location.href='seat_booking.html';" onmouseover="handleMovieHover(this);" onmouseout="handleMovieHover(this);">
+        <img src="images/mermaid.avif" alt="Movie 1">
+        <div class="movie-details">
+          <div class="movie-info">
+            <h3 class="movie-title">The Little Mermaid</h3>
+          </div>
+          <div class="movie-showtimes">
+            <p>Showtimes: 10:00 AM, 2:00 PM, 6:00 PM</p>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card" data-language="hindi" onclick="window.location.href='seat_booking1.html';" onmouseover="handleMovieHover(this);" onmouseout="handleMovieHover(this);">
+        <img src="images/spider.avif" alt="Movie 2">
+        <div class="movie-details">
+          <div class="movie-info">
+            <h3 class="movie-title">Spiderman</h3>
+          </div>
+          <div class="movie-showtimes">
+            <p>Showtimes: 11:00 AM, 3:00 PM, 7:00 PM</p>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card" data-language="korean" onclick="window.location.href='seat_booking2.html';" onmouseover="handleMovieHover(this);" onmouseout="handleMovieHover(this);">
+        <img src="images/sume.avif" alt="Movie 3">
+        <div class="movie-details">
+          <div class="movie-info">
+            <h3 class="movie-title">Suzume</h3>
+          </div>
+          <div class="movie-showtimes">
+            <p>Showtimes: 12:00 PM, 4:00 PM, 8:00 PM</p>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card" data-language="english" onclick="window.location.href='seat_booking3.html';" onmouseover="handleMovieHover(this);" onmouseout="handleMovieHover(this);">
+        <img src="images/transform.avif" alt="Movie 4">
+        <div class="movie-details">
+          <div class="movie-info">
+            <h3 class="movie-title">Transformers</h3>
+          </div>
+          <div class="movie-showtimes">
+            <p>Showtimes: 1:00 PM, 5:00 PM, 9:00 PM</p>
+          </div>
+        </div>
+      </div>
+      <!-- Add more movie cards as needed -->
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 MovieWise. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    function handleMovieHover(movieCard) {
+      // Add the 'highlighted' class to the hovered movie card
+      movieCard.classList.toggle("highlighted");
+
+      // Blur other movie cards
+      var movieCards = document.querySelectorAll(".movie-card");
+      movieCards.forEach(function(card) {
+        if (card !== movieCard) {
+          card.classList.toggle("blurred");
+        }
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get all the language buttons
+      var languageButtons = document.querySelectorAll(".lang-btn");
+
+      // Add click event listener to each language button
+      languageButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+          var selectedLanguage = button.getAttribute("data-language");
+
+          // Hide all movie cards
+          var movieCards = document.querySelectorAll(".movie-card");
+          movieCards.forEach(function(card) {
+            card.style.display = "none";
+          });
+
+          // Show movie cards with the selected language or all movies if "All" is selected
+          var selectedCards;
+          if (selectedLanguage === "all") {
+            selectedCards = document.querySelectorAll(".movie-card");
+          } else {
+            selectedCards = document.querySelectorAll('.movie-card[data-language="' + selectedLanguage + '"]');
+          }
+
+          selectedCards.forEach(function(card) {
+            card.style.display = "block";
+          });
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

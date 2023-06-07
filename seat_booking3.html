@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="seat_booking3.css" />
+  <title>Movie Seat Booking</title>
+</head>
+<body>
+  <div class="container">
+    <h2 id="movie-title">Select a time:</h2>
+    <select id="movie-time">
+      <option value="time1">1:00 PM</option>
+      <option value="time2">5:00 PM</option>
+      <option value="time3">9:00 PM</option>
+    </select>
+  </div>
+  <ul class="showcase">
+    <li>
+      <div class="available"></div>
+      <small>Available</small>
+    </li>
+    <li>
+      <div class="selected"></div>
+      <small>Selected</small>
+    </li>
+    <li>
+      <div class="sold"></div>
+      <small>Sold</small>
+    </li>
+  </ul>
+  <div class="movie-container">
+    <h2>Select a seat:</h2>
+    <div class="screen"></div>
+    <div class="seats-container">
+      <div class="row">
+        <div class="seat" data-price="220"></div>
+        <div class="seat" data-price="220"></div>
+        <div class="seat" data-price="220"></div>
+        <div class="seat" data-price="220"></div>
+        <div class="seat" data-price="220"></div>
+        <div class="seat" data-price="220"></div>
+        <div class="seat" data-price="220"></div>
+        <div class="seat" data-price="220"></div>
+      </div>
+      <div class="row">
+        <div class="seat" data-price="220"></div>
+        <div class="seat" data-price="220"></div>
+        <div class="seat" data-price="220"></div>
+        <div class="seat" data-price="220"></div>
+        <div class="seat" data-price="220"></div>
+        <div class="seat" data-price="220"></div>
+        <div class="seat" data-price="220"></div>
+        <div class="seat" data-price="220"></div>
+      </div>
+      <div class="row">
+        <div class="seat" data-price="250"></div>
+        <div class="seat" data-price="250"></div>
+        <div class="seat" data-price="250"></div>
+        <div class="seat" data-price="250"></div>
+        <div class="seat" data-price="250"></div>
+        <div class="seat" data-price="250"></div>
+        <div class="seat" data-price="250"></div>
+        <div class="seat" data-price="250"></div>
+      </div>
+      <div class="row">
+        <div class="seat" data-price="250"></div>
+        <div class="seat" data-price="250"></div>
+        <div class="seat" data-price="250"></div>
+        <div class="seat" data-price="250"></div>
+        <div class="seat" data-price="250"></div>
+        <div class="seat" data-price="250"></div>
+        <div class="seat" data-price="250"></div>
+        <div class="seat" data-price="250"></div>
+      </div>
+      <div class="row">
+        <div class="seat" data-price="320"></div>
+        <div class="seat" data-price="320"></div>
+        <div class="seat" data-price="320"></div>
+        <div class="seat" data-price="320"></div>
+        <div class="seat" data-price="320"></div>
+        <div class="seat" data-price="320"></div>
+        <div class="seat" data-price="320"></div>
+        <div class="seat" data-price="320"></div>
+      </div>
+      <div class="row">
+        <div class="seat" data-price="320"></div>
+        <div class="seat" data-price="320"></div>
+        <div class="seat" data-price="320"></div>
+        <div class="seat" data-price="320"></div>
+        <div class="seat" data-price="320"></div>
+        <div class="seat" data-price="320"></div>
+        <div class="seat" data-price="320"></div>
+        <div class="seat" data-price="320"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="text">
+    You have selected <span id="count">0</span> seat(s) for a price of RS.
+    <span id="total">0</span>
+  </p>
+
+  <button id="book-btn">Book Now</button>
+
+
+  <script src="seat_booking3.js"></script>
+</body>
+</html>

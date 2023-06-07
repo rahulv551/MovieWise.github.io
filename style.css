@@ -1,0 +1,167 @@
+/* Reset styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,{
+  color: yellow;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #b3b3b3;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.languages {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+.languages h2 {
+  margin-bottom: 10px;
+}
+
+.language-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.language-button {
+  margin: 5px;
+}
+
+.lang-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.lang-btn:hover {
+  background-color: #555;
+}
+
+#movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-top: 50px;
+  min-height: 300px; /* Set a minimum height to prevent resizing */
+}
+
+.movie-card {
+  width: calc(15% - 20px);
+  flex: 0 0 calc(15% - 20px);
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 400px; /* Specify a fixed height for the movie card divs */
+}
+
+.movie-card img {
+  width: 100%;
+  height: 110%; /* Set the desired height for the image */
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+
+.movie-details {
+  padding: 20px;
+}
+
+.movie-details h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.movie-details p {
+  margin-bottom: 5px;
+}
+
+.book-btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #555;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.now-showing {
+  text-align: center;
+  margin-bottom: 20px;
+}
